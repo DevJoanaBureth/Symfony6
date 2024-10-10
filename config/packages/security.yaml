@@ -13,6 +13,7 @@ security:
     dev:
       pattern: ^/(_(profiler|wdt)|css|images|js)/
       security: false
+
     main:
       lazy: true
       provider: app_user_provider
@@ -20,8 +21,7 @@ security:
 
       logout:
         path: app_logout
-        target: home
-        csrf_token_generator: security.csrf.token_manager # Activer CSRF
+        target: app_home
 
       remember_me:
         secret: "%kernel.secret%"

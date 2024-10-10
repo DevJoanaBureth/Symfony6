@@ -7,7 +7,7 @@ controllers:
 
 # Route vers la page d'accueil
 app_home:
-  path: /
+  path: /home
   controller: App\Controller\HomeController::index
 
 # Route pour la page d'inscription

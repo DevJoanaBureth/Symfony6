@@ -32,12 +32,14 @@
 		</br>
 		<li>
 			<a href="{{ path('app_contact') }}">Contact</a>
-			<form action="{{ path('app_logout') }}" method="post">
-				<input type="hidden" name="_csrf_token" value="{{ csrf_token('logout') }}">
-				<button type="submit">Logout</button>
-			</form>
-
-
 		</li>
+
+		<form action="{{ path('app_login')}}" method="post">
+			<button type="submit">Login</button>
+		</form>
+
+		<form action="{{ path('app_logout') }}" method="post">
+			<button action="{{ path('app_logout') }}" type="submit">Logout</button>
+		</form>
 	</ul>
 </div>{% endblock %}
