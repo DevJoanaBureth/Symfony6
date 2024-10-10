@@ -29,10 +29,15 @@
 			<li>Your template at
 				<code>C:/laragon/www/symfony6/templates/home/index.html.twig</code>
 			</li>
-            </br>
-			<li>
-				<a href="{{path('app_contact')}}">Contact</a>
-			</li>
-		</ul>
-	</div>
-{% endblock %}
+		</br>
+		<li>
+			<a href="{{ path('app_contact') }}">Contact</a>
+			<form action="{{ path('app_logout') }}" method="post">
+				<input type="hidden" name="_csrf_token" value="{{ csrf_token('logout') }}">
+				<button type="submit">Logout</button>
+			</form>
+
+
+		</li>
+	</ul>
+</div>{% endblock %}

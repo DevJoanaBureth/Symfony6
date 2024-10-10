@@ -1,5 +1,30 @@
+# config/routes.yaml
 controllers:
-    resource:
-        path: ../src/Controller/
-        namespace: App\Controller
-    type: attribute
+  resource:
+    path: ../src/Controller/
+    namespace: App\Controller
+  type: attribute
+
+# Route vers la page d'accueil
+app_home:
+  path: /
+  controller: App\Controller\HomeController::index
+
+# Route pour la page d'inscription
+app_register:
+  path: /register
+  controller: App\Controller\SecurityController::register
+
+# Route pour la connexion
+app_login:
+  path: /login
+  controller: App\Controller\SecurityController::login
+
+# Route pour la déconnexion
+app_logout:
+  path: /logout
+
+# Route vers une page d'utilisateur
+user_profile:
+  path: /user/profile
+  controller: App\Controller\UserController::profile
